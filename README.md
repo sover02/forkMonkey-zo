@@ -142,7 +142,7 @@ Then open http://localhost:8000/web/index.html in your browser!
     </linearGradient>
 </defs>
 
-<rect width="300" height="300" fill="#F0E68C"/>
+<rect width="300" height="300" fill="#000033"/><circle cx="25" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="25" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="25" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="25" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="25" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="25" cy="275" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="75" cy="275" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="125" cy="275" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="175" cy="275" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="225" cy="275" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="25" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="75" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="125" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="175" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="225" r="1" fill="white" opacity="0.8"/><circle cx="275" cy="275" r="1" fill="white" opacity="0.8"/>
 <circle cx="150" cy="150" r="120" fill="#D2B48C" stroke="#000" stroke-width="3"/>
 <circle cx="60" cy="120" r="40" fill="#D2B48C" stroke="#000" stroke-width="2"/>
 <circle cx="240" cy="120" r="40" fill="#D2B48C" stroke="#000" stroke-width="2"/>
@@ -167,9 +167,9 @@ Then open http://localhost:8000/web/index.html in your browser!
 
 <!-- MONKEY_STATS_START -->
 - **Generation**: 1
-- **Age**: 5 days
-- **Mutations**: 2
-- **Rarity Score**: 20.0/100
+- **Age**: 6 days
+- **Mutations**: 3
+- **Rarity Score**: 25.0/100
 <!-- MONKEY_STATS_END -->
 
 ## Family Tree
