@@ -344,9 +344,9 @@
                     <a href="https://github.com/roeiba/forkMonkey" target="_blank" class="footer-link">
                         <span>📂</span> GitHub
                     </a>
-                    <a href="https://github.com/roeiba/forkMonkey/fork" target="_blank" class="footer-link highlight">
-                        <span>🍴</span> Fork to Breed!
-                    </a>
+                    <button onclick="ForkMonkey.openAdoptionWizard()" class="footer-link highlight adopt-btn">
+                        <span>🍴</span> Adopt Your Monkey!
+                    </button>
                 </div>
 
                 <div class="footer-stats">
@@ -365,6 +365,209 @@
             <button class="modal-close" onclick="ForkMonkey.closeModal()">×</button>
             <div class="modal-body" id="modal-body">
                 <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Wizard Modal -->
+    <div class="modal-overlay" id="adoption-modal">
+        <div class="modal-content glass-panel adoption-wizard">
+            <button class="modal-close" onclick="ForkMonkey.closeAdoptionWizard()">×</button>
+
+            <!-- Wizard Header -->
+            <div class="wizard-header">
+                <h2>🐵 Adopt Your Monkey</h2>
+                <div class="wizard-steps" id="wizard-steps">
+                    <div class="wizard-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Choose Method</span>
+                    </div>
+                    <div class="wizard-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Customize</span>
+                    </div>
+                    <div class="wizard-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1: Choose Method -->
+            <div class="wizard-content" id="wizard-step-1">
+                <p class="wizard-intro">Choose how you'd like to adopt your monkey. Each method offers different levels
+                    of automation.</p>
+
+                <div class="adoption-methods">
+                    <!-- Manual Method -->
+                    <div class="method-card" onclick="ForkMonkey.selectAdoptionMethod('manual')">
+                        <div class="method-icon">🔧</div>
+                        <div class="method-info">
+                            <h3>Manual</h3>
+                            <p>Fork via GitHub, set up Actions & Pages yourself</p>
+                            <div class="method-features">
+                                <span class="feature">✓ Full control</span>
+                                <span class="feature">✓ No account sharing</span>
+                                <span class="feature-warn">⚠ Setup required</span>
+                            </div>
+                        </div>
+                        <div class="method-badge">DIY</div>
+                    </div>
+
+                    <!-- Trustless Method -->
+                    <div class="method-card" onclick="ForkMonkey.selectAdoptionMethod('trustless')">
+                        <div class="method-icon">🔐</div>
+                        <div class="method-info">
+                            <h3>Trustless</h3>
+                            <p>We prepare your monkey, then transfer it to you</p>
+                            <div class="method-features">
+                                <span class="feature">✓ Pre-configured</span>
+                                <span class="feature">✓ No permissions needed</span>
+                                <span class="feature-warn">⚠ Accept transfer email</span>
+                            </div>
+                        </div>
+                        <div class="method-badge recommended">Recommended</div>
+                    </div>
+
+                    <!-- Full Trust Method -->
+                    <div class="method-card" onclick="ForkMonkey.selectAdoptionMethod('oauth')">
+                        <div class="method-icon">✨</div>
+                        <div class="method-info">
+                            <h3>Full Trust</h3>
+                            <p>Authorize our app to set everything up for you</p>
+                            <div class="method-features">
+                                <span class="feature">✓ Fully automated</span>
+                                <span class="feature">✓ Instant setup</span>
+                                <span class="feature-warn">⚠ App authorization</span>
+                            </div>
+                        </div>
+                        <div class="method-badge premium">Premium</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Customization -->
+            <div class="wizard-content hidden" id="wizard-step-2">
+                <p class="wizard-intro">Customize your monkey's initial traits (optional).</p>
+
+                <div class="customization-form">
+                    <div class="form-group">
+                        <label for="custom-name">Monkey Name (optional)</label>
+                        <input type="text" id="custom-name" placeholder="Leave blank for random name" maxlength="30">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custom-body-color">Preferred Body Color</label>
+                        <select id="custom-body-color">
+                            <option value="">🎲 Random</option>
+                            <optgroup label="Common">
+                                <option value="brown">🟤 Brown</option>
+                                <option value="tan">🟡 Tan</option>
+                                <option value="beige">🔶 Beige</option>
+                                <option value="gray">⚪ Gray</option>
+                            </optgroup>
+                            <optgroup label="Uncommon">
+                                <option value="golden">🌟 Golden</option>
+                                <option value="silver">🪙 Silver</option>
+                                <option value="copper">🔸 Copper</option>
+                            </optgroup>
+                            <optgroup label="Rare">
+                                <option value="blue">💙 Blue</option>
+                                <option value="purple">💜 Purple</option>
+                                <option value="green">💚 Green</option>
+                                <option value="pink">💖 Pink</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custom-expression">Starting Expression</label>
+                        <select id="custom-expression">
+                            <option value="">🎲 Random</option>
+                            <option value="happy">😊 Happy</option>
+                            <option value="curious">🧐 Curious</option>
+                            <option value="excited">🤩 Excited</option>
+                            <option value="mischievous">😈 Mischievous</option>
+                            <option value="cool">😎 Cool</option>
+                            <option value="zen">🧘 Zen</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custom-accessory">Starting Accessory</label>
+                        <select id="custom-accessory">
+                            <option value="">🎲 Random</option>
+                            <option value="none">❌ None</option>
+                            <option value="simple_hat">🎩 Simple Hat</option>
+                            <option value="bandana">🎀 Bandana</option>
+                            <option value="sunglasses">🕶️ Sunglasses</option>
+                            <option value="bow">🎀 Bow</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="wizard-btn secondary" onclick="ForkMonkey.wizardBack()">← Back</button>
+                    <button class="wizard-btn primary" onclick="ForkMonkey.wizardNext()">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Confirmation / Action -->
+            <div class="wizard-content hidden" id="wizard-step-3">
+                <!-- Content changes based on selected method -->
+                <div id="wizard-step-3-content">
+                    <!-- Dynamic content injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Trustless: GitHub Username Input -->
+            <div class="wizard-content hidden" id="wizard-trustless-input">
+                <p class="wizard-intro">Enter your GitHub username to receive the monkey transfer.</p>
+
+                <div class="customization-form">
+                    <div class="form-group">
+                        <label for="github-username">GitHub Username *</label>
+                        <input type="text" id="github-username" placeholder="e.g., octocat" required>
+                        <span class="form-hint">We'll fork and prepare your monkey, then send a transfer request to this
+                            account.</span>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="wizard-btn secondary" onclick="ForkMonkey.wizardBack()">← Back</button>
+                    <button class="wizard-btn primary" onclick="ForkMonkey.submitTrustlessAdoption()">
+                        🚀 Create My Monkey
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="wizard-content hidden" id="wizard-loading">
+                <div class="wizard-loading">
+                    <div class="loader large"></div>
+                    <p id="wizard-loading-text">Creating your monkey...</p>
+                </div>
+            </div>
+
+            <!-- Success State -->
+            <div class="wizard-content hidden" id="wizard-success">
+                <div class="wizard-success">
+                    <div class="success-icon">🎉</div>
+                    <h3>Monkey Created!</h3>
+                    <div id="wizard-success-content">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error State -->
+            <div class="wizard-content hidden" id="wizard-error">
+                <div class="wizard-error">
+                    <div class="error-icon">❌</div>
+                    <h3>Something went wrong</h3>
+                    <p id="wizard-error-message">Please try again later.</p>
+                    <button class="wizard-btn primary" onclick="ForkMonkey.resetAdoptionWizard()">Try Again</button>
+                </div>
             </div>
         </div>
     </div>

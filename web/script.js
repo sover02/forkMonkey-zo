@@ -21,11 +21,19 @@ const ForkMonkey = {
     currentTab: 'dashboard',
     treeZoom: 1,
 
+    // Adoption wizard state
+    adoption: {
+        method: null,       // 'manual', 'trustless', 'oauth'
+        step: 1,
+        customization: {}
+    },
+
     // Configuration
     config: {
         repoOwner: 'roeiba',
         repoName: 'forkMonkey',
-        refreshInterval: 60000 // 60 seconds
+        refreshInterval: 60000, // 60 seconds
+        apiBaseUrl: '/api'      // Backend API base URL (to be configured)
     },
 
     /**
