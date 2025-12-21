@@ -1,9 +1,9 @@
 {
-  "generation": 1,
-  "parent_id": null,
-  "dna_hash": "9130b4e989f8a98e",
+  "generation": 2,
+  "parent_id": "dba364f6e0c2ae67",
+  "dna_hash": "7667a798d6d002ce",
   "mutation_count": 0,
-  "birth_timestamp": 847290,
+  "birth_timestamp": 252977,
   "traits": {
     "body_color": {
       "value": "tan",
@@ -11,30 +11,30 @@
       "gene_sequence": "11949536"
     },
     "face_expression": {
-      "value": "cool",
-      "rarity": "uncommon",
-      "gene_sequence": "abb5bfe3"
+      "value": "curious",
+      "rarity": "common",
+      "gene_sequence": "7d0bf056"
     },
     "accessory": {
-      "value": "sunglasses",
-      "rarity": "uncommon",
-      "gene_sequence": "128d27c9"
+      "value": "bandana",
+      "rarity": "common",
+      "gene_sequence": "eef7e9dc"
     },
     "pattern": {
-      "value": "spots",
+      "value": "stripes",
       "rarity": "common",
-      "gene_sequence": "e7bbc10d"
+      "gene_sequence": "49a1b947"
     },
     "background": {
-      "value": "city",
+      "value": "forest",
       "rarity": "uncommon",
-      "gene_sequence": "2071a1d4"
+      "gene_sequence": "edc1a4e4"
     },
     "special": {
-      "value": "none",
-      "rarity": "common",
-      "gene_sequence": "9f7c3055"
+      "value": "sparkles",
+      "rarity": "uncommon",
+      "gene_sequence": "18ebc4a5"
     }
   },
-  "rarity_score": 15.0
+  "rarity_score": 13.333333333333334
 }
